@@ -10,30 +10,20 @@ var router = express.Router();
 /**
  * @api {POST} /user/signup User Signup
  * @apiName SignupUser
- * @apiGroup Auth
+ * @apiGroup User
  *
  * @apiDescription Creates a new User and corresponding User Type.
  *
  * @apiParam {String} email User Email
  * @apiParam {String} password User Password
- * @apiParam {String} role User Role ie talent, trainee, trainer or admin
- * @apiParam {String} first_name User First Name
- * @apiParam {String} last_name User Last Name
- * @apiParam {String} [nationality] User nationality
- *
  * @apiParamExample Request Example:
  * {
  *	"email": "john@gebeya.com",
  *	"password": "password",
- *	"first_name": "John",
- *	"last_name": "Doe",
- *	"role": "talent"
  * }
  *
  * @apiSuccess {String} _id User Id
  * @apiSuccess {String} username User Username
- * @apiSuccess {String} role User Role
- * @apiSuccess {String} realm User Realm
  * @apiSuccess {Date} last_login Last Login Date
  *
  * @apiSuccessExample Response Example:
@@ -41,14 +31,45 @@ var router = express.Router();
  * {
  *  "_id": "5a01de75e020c76235032029",
  *	"username": "john@gebeya.com",
- *	"role": "talent",
- *  "realm": "user",
  *  "last_login": "2017-11-21T16:53:23.820Z"
  * }
  */
 router.post('/signup', userController.createUser);
 
-// POST /user/login
+/**
+ * @api {POST} /user/login User Login
+ * @apiName LoginUser
+ * @apiGroup User
+ *
+ * @apiDescription Creates a new User and corresponding User Type.
+ *
+ * @apiParam {String} email User username
+ * @apiParam {String} password User Password
+ * @apiParamExample Request Example:
+ * {
+ *	"username": "john@gebeya.com",
+ *	"password": "password",
+ * }
+ *
+ * @apiSuccess {String} tokne User token
+ * @apiSuccess {User} User
+ *
+ * @apiSuccessExample Response Example:
+ *  HTTP/1.1 201 Created
+ * {
+ *     "token": "d6uAPieIO8O0qWrnDq6gSwS0HEyEILiab558mkOqxXfHweWr1XcxwvFME/r/WwVZwkDfrjj86Z6v",
+ *     "user": {
+ *         "_id": "5a4793b59e51352a30ed967c",
+ *         "last_modified": "2017-12-30T13:25:09.736Z",
+ *         "date_created": "2017-12-30T13:25:09.736Z",
+ *         "email": "mamit@mamo.com",
+ *         "user": "5a4793b59e51352a30ed967b",
+ *         "first_name": "Mamit",
+ *         "last_name": "Mamo",
+ *         "picture": ""
+ *     }
+ * }
+ */
 router.post('/login', authController.loginUser);
 
 // PUT /user/logout

@@ -1,0 +1,32 @@
+{
+  "name": "dating-api",
+  "version": "1.0.0",
+  "description": "Dating API for Gebeya Final Model",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "prestart": "npm install",
+    "start-dev": "DEBUG=api* nodemon app.js",
+    "build-docs": "./node_modules/.bin/apidoc -i routes/ -o docs/"
+  },
+  "author": "Menasi Ephrem",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "express-formidable": "^1.0.0",
+    "express-unless": "^0.3.1",
+    "express-validator": "^4.3.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "mongoose": "^4.13.2",
+    "mongoose-paginate": "^5.0.3",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6" 
+  }
+}
