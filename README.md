@@ -1,6 +1,10 @@
 # GEBEYA DATING API
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+Gebeya Dating API is simple api that performs CRUD on three models.
+	
+	-Profile
+	-Message
+	-Match
 
   - Hosted on [HEROKU](https://gebeya-date.herokuapp.com) 
   - Postman collection pushed as json file
