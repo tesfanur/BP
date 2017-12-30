@@ -2,5 +2,5 @@
   "name": "Gebeya Dating Api",
   "version": "1.0.0",
   "description": "A simple dation api for Gebeya ",
-  "url" : "https://api.dating.com"
+  "url" : "https://gebeya-date.herokuapp.com"
 }
