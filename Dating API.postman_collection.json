@@ -1,0 +1,346 @@
+{
+	"info": {
+		"name": "Dating API",
+		"_postman_id": "a9d51ae0-f0de-8270-5672-f5d4d51bbf40",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "02f64071-0960-4dc5-83f3-8c8125d1de37",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"mamit@mamo.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"users",
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"mamit@mamo.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"users",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Log out a logged in user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer UNJv8EwerbIj8++EqRkKZSSVJdijk0fUsQ9zCNUDb4vjLkojc48JNVkymNFqceE/y5u2WKdENG6L"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\":\"5a478d1321023d261a6fb62f\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/users/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"users",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/profiles",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"profiles"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single profile with one id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/profiles/5a4793b59e51352a30ed967c",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"profiles",
+						"5a4793b59e51352a30ed967c"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update a single profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \n            \"__v\": 0,\n            \"sex\": \"F\",\n            \"first_name\": \"Mamit\",\n            \"last_name\": \"Mamo\",\n            \"picture\": \"\"\n        }"
+				},
+				"url": {
+					"raw": "localhost:7000/profiles/5a4793b59e51352a30ed967c",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"profiles",
+						"5a4793b59e51352a30ed967c"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\":\"5a4793b59e51352a30ed967c\",\n\t\"to\":\"5a47972d54c2952e5c5fd60c\",\n\t\"subject\": \"HEY 2\",\n\t\"content\": \"HEY YOU!!\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"messages"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get message by pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"messages"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a single message with its ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:7000/messages/5a4798f0349b472eafd79807",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"messages",
+						"5a4798f0349b472eafd79807"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create A new match",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"male\":\"5a4793b59e51352a30ed967c\",\n\t\"female\":\"5a47972d54c2952e5c5fd60c\",\n\t\"percent_of_match\": \"14.225\",\n\t\"communicating\": \"ture\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/matches/",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"matches",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get match collection by pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer uhoIndP6irhlbFlQfCDhQYXe6fJ62On+HYcIJSGXd5YjieCuieexiyCbz8XBejM3jo8nywEqgVwi"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"male\":\"5a4793b59e51352a30ed967c\",\n\t\"female\":\"5a47972d54c2952e5c5fd60c\",\n\t\"percent_of_match\": \"14.225\",\n\t\"communicating\": \"ture\"\n}"
+				},
+				"url": {
+					"raw": "localhost:7000/matches/",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"matches",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
