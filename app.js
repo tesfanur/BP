@@ -32,7 +32,7 @@ app.use(cors(config.CORS_OPTS));
 // Logging HTTP Method and URL
 app.use(logger());
 
-// Serve static
+// Serve static page
 app.use(express.static('public'));
 
 // Authentication
