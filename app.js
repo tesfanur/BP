@@ -64,8 +64,8 @@ app.use(function errorHandler(err, req, res, next){
 // Listen on Port
 app.listen(config.HTTP_PORT, function connectionListener(){
 	debug('Dating API is running on port', config.HTTP_PORT);
+	console.log("EXPRESS APP STARTED LSITENING ON PORT "+config.HTTP_PORT);
 });
 
 // Export app interface
 module.exports = app;
-
